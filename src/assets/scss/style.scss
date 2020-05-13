@@ -1,0 +1,10 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+
+body {
+    line-height: 26px;
+    font-size: $text-normal;
+    font-family: 'Anjoman';
+    text-align: right;
+}
