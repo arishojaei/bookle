@@ -4,7 +4,7 @@
     <!-- Navbar -->
     <nav class="d-flex justify-content-between align-items-center py-4">
       <router-link to="/">
-        <img src="./assets/img/logo.png" alt="brand_logo">
+        <img height="60" src="./assets/img/logo.png" alt="brand_logo">
       </router-link>
       <div class="d-flex align-items-center">
         <img height="20" src="./assets/img/user_icon.svg" alt="user_icon">

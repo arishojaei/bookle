@@ -7,30 +7,57 @@ body {
     font-size: $text-normal;
     font-family: 'Anjoman';
     text-align: right;
+    background: #111;
+    color: #fff;
 }
 
+// Banner
+// -----------------------------
 .banner {
-    background: #eee;
+    background: #222;
     width: 100%;
-    min-height: 300px;
     border-radius: $radius;
     overflow: hidden;
-    margin-bottom: 3em;
 
     img {
         width: 100%;
     }
 }
 
+
+// Book List
+// -----------------------------
+.book-list {
+    &:hover {
+        .book-card {
+            &-cover {
+                opacity: .2;
+            }
+        }
+    }
+}
+
+
+// Book Card
+// -----------------------------
 .book-card {
     text-align: center;
+    margin-bottom: 2.5em;
+    cursor: pointer;
 
     &-cover {
-        background: #eee;
+        background: #222;
         border-radius: $radius;
         width: 100%;
         min-height: 150px;
         margin-bottom: 1em;
+        overflow: hidden;
+        border: 1px solid #000;
+        transition: $transition;
+
+        img {
+            width: 100%;
+        }
     }
 
     &-title {
@@ -40,5 +67,46 @@ body {
     &-author {
         font-size: $text-sm;
         opacity: .7;
+    }
+
+    &:hover {
+        .book-card-cover {
+            opacity: 1;
+        }
+    }
+}
+
+
+// Categories
+// -----------------------------
+.categories {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+
+    .category {
+        label {
+            user-select: none;
+            border: 1px solid #222;
+            border-radius: 50px;
+            margin: .5em;
+            padding: .3em 1em .3em 1em;
+            cursor: pointer;
+            transition: $transition;
+
+            &:hover {
+                border-color: #999;
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked {
+                + label {
+                    border-color: $primary
+                }
+            }
+        }
     }
 }

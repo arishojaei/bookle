@@ -9,16 +9,7 @@ $radius: 1em;
 $radius-lg: 5em;
 
 // Colors
-$primary: #0e1830;
-$primary-light: lighten($primary, $amount: 70);
-
-$secondary: #e3514c;
-$secondary-light: lighten($secondary, $amount: 90);
-$secondary-light2: lighten($secondary, $amount: 38);
-
-$primary-text: #161a23;
-$secondary-text: #fdf4e6;
-
+$primary: #404dff;
 $green: #00C853;
 $red: #FF1744;
 $orange: #FF6D00;
@@ -27,6 +18,3 @@ $gray: #E0E0E0;
 
 // Utils
 $transition: all 250ms;
-
-$shadow-sm-primary: 0 8px 10px rgba($primary, .04);
-$shadow-sm-secondary: 0 8px 10px rgba(darken($secondary, $amount: 60), .2);
