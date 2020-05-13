@@ -8,3 +8,37 @@ body {
     font-family: 'Anjoman';
     text-align: right;
 }
+
+.banner {
+    background: #eee;
+    width: 100%;
+    min-height: 300px;
+    border-radius: $radius;
+    overflow: hidden;
+    margin-bottom: 3em;
+
+    img {
+        width: 100%;
+    }
+}
+
+.book-card {
+    text-align: center;
+
+    &-cover {
+        background: #eee;
+        border-radius: $radius;
+        width: 100%;
+        min-height: 150px;
+        margin-bottom: 1em;
+    }
+
+    &-title {
+        font-weight: bold;
+    }
+
+    &-author {
+        font-size: $text-sm;
+        opacity: .7;
+    }
+}
