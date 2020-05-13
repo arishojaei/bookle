@@ -1,0 +1,44 @@
+/*
+Anjoman fonts are considered a proprietary software.
+To gain information about the laws regarding the use of these fonts, 
+please visit www.fontiran.com 
+--------------------------------------------------------------------
+This set of fonts are used in this project under the license: NP8TNF
+--------------------------------------------------------------------
+*/
+
+$prefix: '../fonts';
+
+$light-font-name: 'Anjoman-FaNum-Light';
+$regular-font-name: 'Anjoman-FaNum-Regular';
+$bold-font-name: 'Anjoman-FaNum-Bold';
+
+@font-face {
+	font-family: Anjoman;
+	font-style: normal;
+	font-weight: 300;
+	src: url('#{$prefix}/eot/#{$light-font-name}.eot');
+	src: url('#{$prefix}/eot/#{$light-font-name}.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('#{$prefix}/woff2/#{$light-font-name}.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('#{$prefix}/woff/#{$light-font-name}.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: Anjoman;
+	font-style: normal;
+	font-weight: normal;
+	src: url('#{$prefix}/eot/#{$regular-font-name}.eot');
+	src: url('#{$prefix}/eot/#{$regular-font-name}.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('#{$prefix}/woff2/#{$regular-font-name}.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('#{$prefix}/woff/#{$regular-font-name}.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: Anjoman;
+	font-style: normal;
+	font-weight: bold;
+	src: url('#{$prefix}/eot/#{$bold-font-name}.eot');
+	src: url('#{$prefix}/eot/#{$bold-font-name}.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('#{$prefix}/woff2/#{$bold-font-name}.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('#{$prefix}/woff/#{$bold-font-name}.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
