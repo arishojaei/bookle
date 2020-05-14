@@ -245,3 +245,26 @@ body {
         }
     }
 }
+
+
+// Authentication
+// -----------------------------
+.auth-card {
+    background: #000;
+    border: 1px solid rgba(#fff, .1);
+    border-radius: $radius;
+    padding: 2em;
+
+    .form-control {
+        background: #111;
+        border: 0;
+        direction: ltr;
+        text-align: left;
+        color: #999;
+
+        &:focus {
+            box-shadow: none;
+            background: #222;
+        }
+    }
+}

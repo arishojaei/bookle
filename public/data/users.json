@@ -7,16 +7,10 @@
             "full_name": "آرش کمانگیر"
         },
         {
-            "id": 2,
-            "email": "sindukht@gmail.com",
-            "password": "8cb2237d0679ca88db6464eac60da96345513964",
-            "full_name": "سین‌دخت کابلی"
-        },
-        {
             "id": 3,
-            "email": "poran@gmail.com",
-            "password": "8cb2237d0679ca88db6464eac60da96345513964",
-            "full_name": "پوران‌دخت"
+            "email": "demo@demo.com",
+            "password": "89e495e7941cf9e40e6980d14a16bf023ccd4c91",
+            "full_name": "آقای دمو"
         }
     ]
 }

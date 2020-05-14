@@ -6,6 +6,7 @@
     <categories @filter="handleFilter" />
     <book-list :data="filteredBooks" @info-request="showBook"/>
     <modal v-if="bookInfo" :data="bookInfo" @close="closeModal" />
+
   </div>
 </template>
 
@@ -48,6 +49,13 @@ export default {
         .then(response => {
           this.books = response.data.books
           this.filteredBooks = this.books
+
+          console.log(this.books);
+          
+        })
+        .catch(() => {
+          console.log('sds');
+          
         })
     },
     handleFilter(payload) {
