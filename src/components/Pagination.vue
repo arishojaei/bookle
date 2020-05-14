@@ -29,6 +29,15 @@ export default {
         },
     },
 
+    watch: {
+        total(val) {
+            if (val) {
+                this.totalPages = Math.ceil(this.total / this.perPage)
+                this.paginateTo('first')
+            }
+        }
+    },
+
     data() {
         return {
             totalPages: Math.ceil(this.total / this.perPage),
@@ -47,7 +56,13 @@ export default {
 
     methods: {
         paginateTo(payload) {
-            (payload === 'next') ? this.currentPage++ : this.currentPage--
+            if (payload === 'next') {
+                this.currentPage++
+            } else if (payload === 'prev') {
+                this.currentPage--
+            } else if (payload === 'first') {
+                this.currentPage = 1
+            }
             this.$emit('pageChange', payload)
         }
     }

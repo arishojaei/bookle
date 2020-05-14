@@ -62,8 +62,10 @@ export default {
         handlePageChange(payload) {
             if (payload === 'next') {
                 this.listStart = this.listStart + this.perPage
-            } else {
+            } else if (payload === 'prev') {
                 this.listStart = this.listStart - this.perPage
+            } else if (payload === 'first') {
+                this.listStart = 0
             }
         }
     }
