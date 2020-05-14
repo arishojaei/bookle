@@ -2,7 +2,7 @@
     <div>
         <div class="row book-list" v-if="data.length">
             <div v-for="(book, i) in data" :key="i" class="col-6 col-md-4 col-lg-3">
-                <book-card :data="book" />
+                <book-card :data="book" @info-request="handleRequest" />
             </div>
         </div>
 
@@ -32,5 +32,11 @@ export default {
             require: true
         }
     },
+
+    methods: {
+        handleRequest(payload) {
+            this.$emit('info-request', payload)
+        }
+    }
 }
 </script>

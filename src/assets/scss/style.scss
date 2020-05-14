@@ -136,6 +136,7 @@ body {
         overflow-y: scroll;
         padding: 4em;
         position: relative;
+        display: flex;
         border-radius: $radius;
         
         .closeBtn {
@@ -155,6 +156,15 @@ body {
 
             &:hover {
                 background: #333;
+            }
+        }
+
+        .cover {
+            position: sticky;
+            top: 0;
+            
+            img {
+                border-radius: $radius;
             }
         }
 

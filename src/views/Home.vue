@@ -7,9 +7,9 @@
 
     <categories @filter="handleFilter" />
 
-    <book-list :data="filteredBooks" />
+    <book-list :data="filteredBooks" @info-request="showBook"/>
 
-    <modal />
+    <modal v-if="bookInfo" :data="bookInfo" @close="closeModal" />
 
   </div>
 </template>
@@ -42,7 +42,8 @@ export default {
   data() {
     return {
       books: [],
-      filteredBooks: []
+      filteredBooks: [],
+      bookInfo: null
     }
   },
 
@@ -62,6 +63,12 @@ export default {
           return book.category_id == payload
         })
       }
+    },
+    showBook(payload) {
+      this.bookInfo = payload
+    },
+    closeModal() {
+      this.bookInfo = null
     }
   },
 
