@@ -1,16 +1,11 @@
 <template>
   <div class="my-4">
-
     <div class="banner">
       <img src="@/assets/img/banner.png" alt="">
     </div>
-
     <categories @filter="handleFilter" />
-
     <book-list :data="filteredBooks" @info-request="showBook"/>
-
     <modal v-if="bookInfo" :data="bookInfo" @close="closeModal" />
-
   </div>
 </template>
 
@@ -43,7 +38,7 @@ export default {
     return {
       books: [],
       filteredBooks: [],
-      bookInfo: null
+      bookInfo: null,
     }
   },
 

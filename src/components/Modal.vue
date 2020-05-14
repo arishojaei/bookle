@@ -6,8 +6,8 @@
             <div class="cover">
                 <img :src="data.image" :alt="data.title">
             </div>
-            <div class="w-100 mr-5">
-                <h2 class="mb-5">{{ data.title }}</h2>
+            <div class="w-100 mr-md-5">
+                <h2 class="text-center text-md-right mb-5">{{ data.title }}</h2>
                 <ul>
                     <li>
                         <small class="opa-5">نویسنده</small>
