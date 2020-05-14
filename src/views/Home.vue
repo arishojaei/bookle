@@ -5,32 +5,32 @@
       <img src="@/assets/img/banner.png" alt="">
     </div>
 
-  <Categories />
+    <categories @filter="handleFilter" />
 
-    <div class="row book-list">
-      <div v-for="(book, i) in books" :key="i" class="col-6 col-md-4 col-lg-3">
-        <BookCard :data="book" />
-      </div>
-    </div>
+    <book-list :data="filteredBooks" />
+
+    <modal />
 
   </div>
 </template>
 
 <script>
 
-// Components
-import BookCard from '@/components/BookCard';
-import Categories from '@/components/Categories';
-
 // Utils
 import { get } from '@/utils/http-request'
+
+// Components
+import Modal from '@/components/Modal';
+import BookList from '@/components/BookList';
+import Categories from '@/components/Categories';
 
 export default {
   name: 'Home',
 
   components: {
     Categories,
-    BookCard
+    BookList,
+    Modal
   },
 
   metaInfo() {
@@ -41,7 +41,8 @@ export default {
 
   data() {
     return {
-      books: []
+      books: [],
+      filteredBooks: []
     }
   },
 
@@ -50,7 +51,17 @@ export default {
       get('/books.json')
         .then(response => {
           this.books = response.data.books
+          this.filteredBooks = this.books
         })
+    },
+    handleFilter(payload) {
+      if (payload == 0) {
+        this.filteredBooks = this.books
+      } else {
+        this.filteredBooks = this.books.filter(book => {
+          return book.category_id == payload
+        })
+      }
     }
   },
 

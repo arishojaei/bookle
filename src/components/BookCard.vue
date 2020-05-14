@@ -1,10 +1,10 @@
 <template>
     <div class="book-card">
           <div class="book-card-cover">
-            <img :src="data.image" :alt="data.title">
+                <img :src="data.image" :alt="data.title">
           </div>
           <h4 class="book-card-title"> {{ data.title }} </h4>
-          <span class="book-card-author"> {{ data.author }} </span>
+          <span class="book-card-author"> {{ data.category_id }} </span>
     </div>
 </template>
 
